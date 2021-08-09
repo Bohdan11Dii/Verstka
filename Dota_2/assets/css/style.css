@@ -1,0 +1,71 @@
+body {
+    font-family: 'STIX Two Text', serif;
+    margin: 0;
+    font-size: 14px;
+    color: #000;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    max-width: 1170px;
+
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    background-color: gray;
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.header_logo {
+    /*color: white;*/
+}
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0
+}
+
+
+.nav {
+    display: flex;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nav_link {
+    margin-left: 50px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.nav_link:first-child {
+    margin-left: 0;
+}
+
+.nav_link:hover {
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+.intro {
+
+   height: 1080px;
+
+
+}
+
+
+
+
