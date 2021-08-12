@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital@1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<!--    <script src="assets/js/bootstrap.bundle.min.js"></script>-->
+
 </head>
 <body>
 
@@ -28,31 +31,19 @@
                     <a class="nav_link" href="#">About</a>
                     <a class="nav_link" href="#">Our team</a>
                     <a class="nav_link" href="#">Download</a>
+                    <a class="nav_link" href="#login">Log in</a>
                 </nav>
             </div>
 
        </div>
-       <form>
-           <div class="form">
-               <h1>Login</h1>
 
-               <label ><b>Nic-name</b></label>
-               <input type="text" placeholder="Enter Email" name="Nic-name" required>
-
-               <label ><b>Email</b></label>
-               <input type="text" placeholder="Enter Email" name="email" required>
-
-               <label ><b>Password</b></label>
-               <input type="password" placeholder="Enter Password" name="psw" required>
-
-               <button type="submit" class="btn">Login</button>
-           </div>
-       </form>
    </header>
 
 
 <div class="intro">
-    <img class="img" src="assets/img/title/2.jpg">
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" controls="controls">
+        <source src="assets/video/Dota%202%20Gamescom%20Trailer.mp4" type="video/mp4">
+    </video>
 
 </div>
     <div class="cont">
@@ -869,6 +860,27 @@
         </div>
     </div>
 </section>
+
+<div class="content">
+    <form>
+
+            <div class="form" id="login">
+                <h1 class="login">Login</h1>
+
+                <label ><b>Nic-name</b></label>
+                <input type="text" placeholder="Enter Email" name="Nic-name" required>
+
+                <label ><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label ><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" class="btn btn-dark">Login</button>
+            </div>
+
+    </form>
+</div>
 
 
 
