@@ -55,6 +55,7 @@ body {
     color: white;
     text-decoration: none;
     transition: 0.4s;
+
 }
 
 .nav_link:first-child {
@@ -120,6 +121,16 @@ body {
     height: 100%;
     transform-style: preserve-3d;
     animation: rotate360 60s infinite forwards linear;
+}
+
+.unselectable {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
 }
 .carousel__face {
     position: absolute;
@@ -203,10 +214,15 @@ span {
 }
 
 
+
 .heroes {
 
     display: flex;
     justify-content: space-between;
+}
+
+.herous_search {
+    margin: 50px 50px;
 }
 
 .heroes_item {
@@ -217,11 +233,44 @@ span {
 
 .heroes_img {
     transition: transform .2s;
+
+
 }
 
-.heroes_img:hover {
-    transform: scale(1.2);
+.heroes_img:hover{
+    transform: scale(1.4);
     cursor: pointer;
+    filter: drop-shadow(0 0 5rem #D4D11B);
+    /*backdrop-filter: blur(20px);*/
+
+
+
+
+}
+
+.heroes_text {
+    font-family: 'STIX Two Text', serif;
+    color: #fff;
+    /*background-color: rgba(0,0,0,0.15);*/
+    /*border: 1px solid red;*/
+
+    text-align: center;
+    text-transform: uppercase;
+    /*margin-top: -50px;*/
+    /*margin-left: -10px;*/
+
+    z-index: 1;
+    /*display: none;*/
+
+
+
+
+}
+
+.heroes_img:hover .heroes_text {
+    display: block;
+
+
 }
 
 .form {
@@ -271,3 +320,70 @@ input[type=text]:focus, input[type=password]:focus {
 .btn:hover {
     opacity: 1;
 }
+
+
+
+.form_1{
+    position: relative;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+}
+
+.input_1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.fa{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+
+.form_1:hover{
+    width: 200px;
+    cursor: pointer;
+}
+
+.form_1:hover input{
+    display: block;
+}
+
+.form_1:hover .fa{
+    background: #07051a;
+    color: white;
+}
+
+
+
+
+
+
