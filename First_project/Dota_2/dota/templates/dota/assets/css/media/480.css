@@ -1,0 +1,32 @@
+@media (max-width: 480px) {
+    .header {
+        width: 480px;
+
+    }
+
+
+
+   .nav_link {
+       width: 100%;
+       margin-left: 170px;
+   }
+
+
+    .intro video {
+        width: 100%;
+    }
+
+    .heroes_item {
+        margin: auto;
+    }
+
+    .form_1 {
+        left: 50%;
+    }
+
+    .carousel__face {
+        width: 150px;
+        height: 94px;
+    }
+
+}

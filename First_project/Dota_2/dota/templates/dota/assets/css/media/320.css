@@ -1,0 +1,24 @@
+@media (max-width: 320px) {
+    .header {
+        width: 320px;
+
+    }
+
+
+
+    .nav_link {
+        width: 100%;
+        margin-left: 170px;
+    }
+
+
+    .intro video {
+        width: 100%;
+    }
+
+    .heroes_item {
+        margin: auto;
+    }
+
+
+}
