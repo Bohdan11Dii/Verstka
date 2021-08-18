@@ -42,7 +42,7 @@ def login(request):
     return HttpResponse("Authorization")
 
 
-def show_post(reqyest, post_id):
+def show_post(request, post_id):
     return HttpResponse(f"Heroyes with id = {post_id}")
 
 

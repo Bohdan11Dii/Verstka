@@ -1,6 +1,6 @@
-
-<!DOCTYPE html>
 {% load static %}
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
 
@@ -9,6 +9,9 @@
 
     <link rel="stylesheet" href="{% static "../../static/dota/css/style.css" %}">
     <link rel="stylesheet" href="{% static "../../static/dota/css/media/480.css" %}">
+
+   <link rel="shortcut icon" href="{% static 'dota/img/ico/dota2.ico' %}" type="image/x-icon"/>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital@1&display=swap" rel="stylesheet">
@@ -99,14 +102,14 @@
 
         <form class="form_1">
             <input class="input_1" type="search">
-            <i class="fa fa-search"></i>
+            <button class="fa fa-search"></button>
         </form>
 
 
     <div class="container_heroes">
 
-
-            <div class="heroes_item"  >
+            {% for p in posts %}
+            <a class="heroes_item" href="{{p.get_absolute_url}}" >
                 <div class="heroes_img">
                     <img src="../../static/dota/img/heroes/Abaddon_icon.png" >
                     <div class="heroes_text">
@@ -114,10 +117,11 @@
                         Abaddon
                     </div>
                 </div>
-            </div>
+            </a>
+            {% endfor %}
 
 
-            <div class="heroes_item" >
+            <a class="heroes_item" href="{{p.get_absolute_url}}">
                 <div class="heroes_img">
                     <img src="../../static/dota/img/heroes/Alchemist_icon.png">
                     <div class="heroes_text">
@@ -125,9 +129,9 @@
                         Alchemist
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="heroes_item" >
+            <a class="heroes_item" href="{{p.get_absolute_url}}" >
                 <div class="heroes_img">
                     <img src="../../static/dota/img/heroes/Ancient_Apparition_Large.png">
                     <div class="heroes_text">
@@ -135,8 +139,8 @@
                         Ancient_Apparition
                     </div>
                 </div>
-            </div>
-            <div class="heroes_item">
+            </a>
+            <a class="heroes_item" href="{{p.get_absolute_url}}">
                 <div class="heroes_img">
                     <img src="../../static/dota/img/heroes/Anti-Mage_icon.png">
                     <div class="heroes_text">
@@ -144,7 +148,7 @@
                         Anti-Mage
                     </div>
                 </div>
-            </div>
+            </a>
 
 
 
@@ -1379,6 +1383,7 @@
 
     </div>
 </section>
+
 
 <div class="content">
 
