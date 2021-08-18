@@ -7,14 +7,14 @@
     <meta charset="UTF-8">
     <title>Dota_2</title>
 
-    <link rel="stylesheet" href="{% static "../../static/assets/css/style.css" %}">
-    <link rel="stylesheet" href="{% static "../../static/assets/css/media/480.css" %}">
+    <link rel="stylesheet" href="{% static "../../static/dota/css/style.css" %}">
+    <link rel="stylesheet" href="{% static "../../static/dota/css/media/480.css" %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital@1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
-    <link rel="stylesheet" href="{% static "../../static/assets/css/bootstrap.min.css" %}">
-<!--    <script src="assets/js/bootstrap.bundle.min.js"></script>-->
+    <link rel="stylesheet" href="{% static "../../static/dota/css/bootstrap.min.css" %}">
+<!--    <script src="dota/js/bootstrap.bundle.min.js"></script>-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@600&display=swap" rel="stylesheet">
@@ -39,11 +39,16 @@
 
                 </div>
                 <nav class="nav ">
-                    <a class="nav_link" href="#">Home</a>
-                    <a class="nav_link" href="#">About</a>
-                    <a class="nav_link" href="#">Our team</a>
-                    <a class="nav_link" href="#">Download</a>
-                    <a class="nav_link" href="#login">Log in</a>
+
+
+                {% for m in menu %}
+
+                        <a class="nav_link" href="{% url m.url_name %}">{{m.title}}</a>
+
+                {% endfor %}
+                    <a class="nav_link" href="{% url 'register' %}">Registration</a> | <a class="nav_link" href = "{% url 'login' %}">Login</a>
+
+
                 </nav>
             </div>
 
@@ -54,7 +59,7 @@
 
 <div class="intro">
     <video class="video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" controls="controls">
-        <source src="../../static/assets/video/Dota%202%20Gamescom%20Trailer.mp4" type="video/mp4" >
+        <source src="../../static/dota/video/Dota%202%20Gamescom%20Trailer.mp4" type="video/mp4" >
     </video>
 
 </div>
@@ -100,39 +105,42 @@
 
     <div class="container_heroes">
 
-            <div class="heroes_item">
-                <div class="heroes_img">
 
-                    <img src="../../static/assets/img/heroes/Abaddon_icon.png">
+            <div class="heroes_item"  >
+                <div class="heroes_img">
+                    <img src="../../static/dota/img/heroes/Abaddon_icon.png" >
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Abaddon
                     </div>
                 </div>
             </div>
-            <div class="heroes_item">
+
+
+            <div class="heroes_item" >
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Alchemist_icon.png">
+                    <img src="../../static/dota/img/heroes/Alchemist_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Alchemist
                     </div>
                 </div>
             </div>
-            <div class="heroes_item">
+
+            <div class="heroes_item" >
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Ancient_Apparition_Large.png">
+                    <img src="../../static/dota/img/heroes/Ancient_Apparition_Large.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Ancient_Apparition
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Anti-Mage_icon.png">
+                    <img src="../../static/dota/img/heroes/Anti-Mage_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Anti-Mage
                     </div>
                 </div>
@@ -145,36 +153,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Axe_icon.png">
+                    <img src="../../static/dota/img/heroes/Axe_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Axe
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Bane_icon.png">
+                    <img src="../../static/dota/img/heroes/Bane_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Bane
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Batrider_icon.png">
+                    <img src="../../static/dota/img/heroes/Batrider_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Batrider
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Beastmaster_icon.png">
+                    <img src="../../static/dota/img/heroes/Beastmaster_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Beastmaster
                     </div>
                 </div>
@@ -187,36 +195,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Bloodseeker_icon.png">
+                    <img src="../../static/dota/img/heroes/Bloodseeker_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Bloodseeker
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Bounty_Hunter_icon.png">
+                    <img src="../../static/dota/img/heroes/Bounty_Hunter_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Bounty Hunter
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Brewmaster_icon.png">
+                    <img src="../../static/dota/img/heroes/Brewmaster_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Brewmaster
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Bristleback_icon.png">
+                    <img src="../../static/dota/img/heroes/Bristleback_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Bristleback
                     </div>
                 </div>
@@ -229,36 +237,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Broodmother_icon.png">
+                    <img src="../../static/dota/img/heroes/Broodmother_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Broodmother
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Centaur_Warrunner_icon.png">
+                    <img src="../../static/dota/img/heroes/Centaur_Warrunner_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Centaur Warrunner
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Chaos_Knight_icon.png">
+                    <img src="../../static/dota/img/heroes/Chaos_Knight_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Chaos Knight
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Chen_icon.png">
+                    <img src="../../static/dota/img/heroes/Chen_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Chen
                     </div>
                 </div>
@@ -274,36 +282,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Clinkz_icon.png">
+                    <img src="../../static/dota/img/heroes/Clinkz_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Clinkz
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Clockwerk_icon.png">
+                    <img src="../../static/dota/img/heroes/Clockwerk_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Clockwerk
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Crystal_Maiden_icon.png">
+                    <img src="../../static/dota/img/heroes/Crystal_Maiden_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Crystal Maiden
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Dark_Seer_icon.png">
+                    <img src="../../static/dota/img/heroes/Dark_Seer_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Dark Seer
                     </div>
                 </div>
@@ -317,36 +325,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Dark_Willow_icon.png">
+                    <img src="../../static/dota/img/heroes/Dark_Willow_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Dark Willow
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Dawnbreaker_icon.png">
+                    <img src="../../static/dota/img/heroes/Dawnbreaker_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Dawnbreaker
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Dazzle_icon.png">
+                    <img src="../../static/dota/img/heroes/Dazzle_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Dazzle
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Death_Prophet_icon.png">
+                    <img src="../../static/dota/img/heroes/Death_Prophet_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Death Prophet
                     </div>
                 </div>
@@ -359,36 +367,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Disruptor_icon.png">
+                    <img src="../../static/dota/img/heroes/Disruptor_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Disruptor
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Doom_icon.png">
+                    <img src="../../static/dota/img/heroes/Doom_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Doom
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/download.jpeg">
+                    <img src="../../static/dota/img/heroes/download.jpeg">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Dragon Knight
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Drow_Ranger_icon.png">
+                    <img src="../../static/dota/img/heroes/Drow_Ranger_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Drow Ranger
                     </div>
                 </div>
@@ -405,36 +413,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Earth_Spirit_icon.png">
+                    <img src="../../static/dota/img/heroes/Earth_Spirit_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Earth Spirit
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Earthshaker_icon.png">
+                    <img src="../../static/dota/img/heroes/Earthshaker_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Earthshaker
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Elder_Titan_icon.png">
+                    <img src="../../static/dota/img/heroes/Elder_Titan_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Elder Titan
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Ember_Spirit_icon.png">
+                    <img src="../../static/dota/img/heroes/Ember_Spirit_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Ember Spirit
                     </div>
                 </div>
@@ -447,36 +455,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Enchantress_icon.png">
+                    <img src="../../static/dota/img/heroes/Enchantress_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Enchantress
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Enigma_icon.png">
+                    <img src="../../static/dota/img/heroes/Enigma_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Enigma
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Faceless_Void_icon.png">
+                    <img src="../../static/dota/img/heroes/Faceless_Void_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Faceless Void
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Grimstroke_icon.png">
+                    <img src="../../static/dota/img/heroes/Grimstroke_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Grimstroke
                     </div>
                 </div>
@@ -489,36 +497,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Gyrocopter_icon.png">
+                    <img src="../../static/dota/img/heroes/Gyrocopter_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Gyrocopter
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Hoodwink_icon.png">
+                    <img src="../../static/dota/img/heroes/Hoodwink_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Hoodwink
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Huskar_icon.png">
+                    <img src="../../static/dota/img/heroes/Huskar_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Huskar
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Invoker.png">
+                    <img src="../../static/dota/img/heroes/Invoker.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Invoker
                     </div>
                 </div>
@@ -532,36 +540,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Io_icon.png">
+                    <img src="../../static/dota/img/heroes/Io_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Io
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Jakiro_icon.png">
+                    <img src="../../static/dota/img/heroes/Jakiro_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Jakiro
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Juggernaut_icon.png">
+                    <img src="../../static/dota/img/heroes/Juggernaut_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Juggernaut
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Keeper_of_the_Light_icon.png">
+                    <img src="../../static/dota/img/heroes/Keeper_of_the_Light_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Keeper of the Light
                     </div>
                 </div>
@@ -574,36 +582,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Kunkka_icon.png">
+                    <img src="../../static/dota/img/heroes/Kunkka_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Kunkka
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Legion_Commander_icon.png">
+                    <img src="../../static/dota/img/heroes/Legion_Commander_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Legion Commander
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Leshrac_icon.png">
+                    <img src="../../static/dota/img/heroes/Leshrac_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Leshrac
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Lich_icon.png">
+                    <img src="../../static/dota/img/heroes/Lich_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Lich
                     </div>
                 </div>
@@ -616,36 +624,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Lifestealer_icon.png">
+                    <img src="../../static/dota/img/heroes/Lifestealer_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Lifestealer
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Lina_icon.png">
+                    <img src="../../static/dota/img/heroes/Lina_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Lina
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Lion_icon.png">
+                    <img src="../../static/dota/img/heroes/Lion_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Lion
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Lone_Druid_icon.png">
+                    <img src="../../static/dota/img/heroes/Lone_Druid_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Lone Druid
                     </div>
                 </div>
@@ -659,36 +667,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Luna_icon.png">
+                    <img src="../../static/dota/img/heroes/Luna_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Luna
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Lycan_icon.png">
+                    <img src="../../static/dota/img/heroes/Lycan_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Lycan
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Magnus_icon.png">
+                    <img src="../../static/dota/img/heroes/Magnus_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Magnus
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Mars_icon.png">
+                    <img src="../../static/dota/img/heroes/Mars_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Mars
                     </div>
                 </div>
@@ -700,36 +708,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Medusa_icon.png">
+                    <img src="../../static/dota/img/heroes/Medusa_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Medusa
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Meepo_icon.png">
+                    <img src="../../static/dota/img/heroes/Meepo_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Meepo
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Mirana_icon.png">
+                    <img src="../../static/dota/img/heroes/Mirana_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Mirana
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Monkey_King_icon.png">
+                    <img src="../../static/dota/img/heroes/Monkey_King_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Monkey King
                     </div>
                 </div>
@@ -743,36 +751,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Morphling_icon.png">
+                    <img src="../../static/dota/img/heroes/Morphling_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Morphling
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Naga_Siren_icon.png">
+                    <img src="../../static/dota/img/heroes/Naga_Siren_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Naga Siren
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="{% static "../../static/assets/img/heroes/Nature%2527s_Prophet_icon.png" %}">
+                    <img src="{% static "../../static/dota/img/heroes/Nature%2527s_Prophet_icon.png" %}">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Nature Prophet
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Necrophos_icon.png">
+                    <img src="../../static/dota/img/heroes/Necrophos_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Necrophos
                     </div>
                 </div>
@@ -784,36 +792,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Night_Stalker_icon.png">
+                    <img src="../../static/dota/img/heroes/Night_Stalker_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Night Stalker
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Nyx_Assassin_icon.png">
+                    <img src="../../static/dota/img/heroes/Nyx_Assassin_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Nyx Assassin
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Ogre_Magi_icon.png">
+                    <img src="../../static/dota/img/heroes/Ogre_Magi_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Ogre Magi
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Omniknight_icon.png">
+                    <img src="../../static/dota/img/heroes/Omniknight_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Omniknight
                     </div>
                 </div>
@@ -826,36 +834,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Oracle_icon.png">
+                    <img src="../../static/dota/img/heroes/Oracle_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Oracle
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Outworld_Destroyer_icon.png">
+                    <img src="../../static/dota/img/heroes/Outworld_Destroyer_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Outworld Destroyer
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Pangolier_icon.png">
+                    <img src="../../static/dota/img/heroes/Pangolier_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Pangolier
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Phantom_Assassin_icon.png">
+                    <img src="../../static/dota/img/heroes/Phantom_Assassin_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Phantom Assassin
                     </div>
                 </div>
@@ -869,36 +877,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Phantom_Lancer_icon.png">
+                    <img src="../../static/dota/img/heroes/Phantom_Lancer_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Phantom Lancer
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Phoenix_icon.png">
+                    <img src="../../static/dota/img/heroes/Phoenix_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Phoenix
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Puck_icon.png">
+                    <img src="../../static/dota/img/heroes/Puck_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Puck
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Pudge_icon.png">
+                    <img src="../../static/dota/img/heroes/Pudge_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Pudge
                     </div>
                 </div>
@@ -911,36 +919,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Pugna_icon.png">
+                    <img src="../../static/dota/img/heroes/Pugna_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Pugna
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Queen_of_Pain_icon.png">
+                    <img src="../../static/dota/img/heroes/Queen_of_Pain_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Queen of Pain
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Razor_icon.png">
+                    <img src="../../static/dota/img/heroes/Razor_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Razor
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Riki_icon.png">
+                    <img src="../../static/dota/img/heroes/Riki_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Riki
                     </div>
                 </div>
@@ -953,36 +961,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Rubick_icon.png">
+                    <img src="../../static/dota/img/heroes/Rubick_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Rubick
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Sand_King_icon.png">
+                    <img src="../../static/dota/img/heroes/Sand_King_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Sand King
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Shadow_Demon_icon.png">
+                    <img src="../../static/dota/img/heroes/Shadow_Demon_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Shadow Demon
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Shadow_Fiend_icon.png">
+                    <img src="../../static/dota/img/heroes/Shadow_Fiend_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Shadow Fiend
                     </div>
                 </div>
@@ -995,36 +1003,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Shadow_Shaman_icon.png">
+                    <img src="../../static/dota/img/heroes/Shadow_Shaman_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Shadow Shaman
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Silencer_icon.png">
+                    <img src="../../static/dota/img/heroes/Silencer_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Silencer
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Skywrath_Mage_icon.png">
+                    <img src="../../static/dota/img/heroes/Skywrath_Mage_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Skywrath Mage
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Slardar_icon.png">
+                    <img src="../../static/dota/img/heroes/Slardar_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Slardar
                     </div>
                 </div>
@@ -1037,36 +1045,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Slark_icon.png">
+                    <img src="../../static/dota/img/heroes/Slark_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Slark
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Snapfire_icon.png">
+                    <img src="../../static/dota/img/heroes/Snapfire_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Snapfire
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Sniper_icon.png">
+                    <img src="../../static/dota/img/heroes/Sniper_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Sniper
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Spectre_icon.png">
+                    <img src="../../static/dota/img/heroes/Spectre_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Spectre
                     </div>
                 </div>
@@ -1079,36 +1087,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Spirit_Breaker_icon.png">
+                    <img src="../../static/dota/img/heroes/Spirit_Breaker_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Spirit Breaker
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Storm_Spirit_icon.png">
+                    <img src="../../static/dota/img/heroes/Storm_Spirit_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Storm Spirit
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Sven_icon.png">
+                    <img src="../../static/dota/img/heroes/Sven_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Sven
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Techies_icon.png">
+                    <img src="../../static/dota/img/heroes/Techies_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Techies
                     </div>
                 </div>
@@ -1121,36 +1129,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Templar_Assassin_icon.png">
+                    <img src="../../static/dota/img/heroes/Templar_Assassin_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Templar Assassin
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Terrorblade_icon.png">
+                    <img src="../../static/dota/img/heroes/Terrorblade_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Terrorblade
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Tidehunter_icon.png">
+                    <img src="../../static/dota/img/heroes/Tidehunter_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Tidehunter
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Timbersaw_icon.png">
+                    <img src="../../static/dota/img/heroes/Timbersaw_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Timbersaw
                     </div>
                 </div>
@@ -1163,36 +1171,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Tinker_icon.png">
+                    <img src="../../static/dota/img/heroes/Tinker_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Tinker
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Tiny_icon.png">
+                    <img src="../../static/dota/img/heroes/Tiny_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Tiny
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Treant_Protector_icon.png">
+                    <img src="../../static/dota/img/heroes/Treant_Protector_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Treant Protector
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Troll_Warlord_icon.png">
+                    <img src="../../static/dota/img/heroes/Troll_Warlord_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Troll Warlord
                     </div>
                 </div>
@@ -1204,27 +1212,27 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Tusk_icon.png">
+                    <img src="../../static/dota/img/heroes/Tusk_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Tusk
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Underlord_icon.png">
+                    <img src="../../static/dota/img/heroes/Underlord_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Underlord
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/download%20(1).jpeg">
+                    <img src="../../static/dota/img/heroes/download%20(1).jpeg">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Undying
                     </div>
                 </div>
@@ -1232,9 +1240,9 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Ursa_icon.png">
+                    <img src="../../static/dota/img/heroes/Ursa_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Ursa
                     </div>
                 </div>
@@ -1247,36 +1255,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Vengeful_Spirit_icon.png">
+                    <img src="../../static/dota/img/heroes/Vengeful_Spirit_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Vengeful_Spirit
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Venomancer_icon.png">
+                    <img src="../../static/dota/img/heroes/Venomancer_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Venomancer
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Viper_icon.png">
+                    <img src="../../static/dota/img/heroes/Viper_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Viper
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Visage_icon.png">
+                    <img src="../../static/dota/img/heroes/Visage_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Visage
                     </div>
                 </div>
@@ -1289,36 +1297,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Void_Spirit_icon.png">
+                    <img src="../../static/dota/img/heroes/Void_Spirit_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Void Spirit
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Warlock_icon.png">
+                    <img src="../../static/dota/img/heroes/Warlock_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Warlock
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Weaver_icon.png">
+                    <img src="../../static/dota/img/heroes/Weaver_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/lov.png">
+                        <img src="../../static/dota/img/atributes/lov.png">
                         Weaver
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Windranger_icon.png">
+                    <img src="../../static/dota/img/heroes/Windranger_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Windranger
                     </div>
                 </div>
@@ -1332,36 +1340,36 @@
 
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Winter_Wyvern_icon.png">
+                    <img src="../../static/dota/img/heroes/Winter_Wyvern_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Winter Wyvern
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Witch_Doctor_icon.png">
+                    <img src="../../static/dota/img/heroes/Witch_Doctor_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Witch Doctor
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Wraith_King_icon.png">
+                    <img src="../../static/dota/img/heroes/Wraith_King_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/power.png">
+                        <img src="../../static/dota/img/atributes/power.png">
                         Wraith King
                     </div>
                 </div>
             </div>
             <div class="heroes_item">
                 <div class="heroes_img">
-                    <img src="../../static/assets/img/heroes/Zeus_icon.png">
+                    <img src="../../static/dota/img/heroes/Zeus_icon.png">
                     <div class="heroes_text">
-                        <img src="../../static/assets/img/atributes/intelogents.png">
+                        <img src="../../static/dota/img/atributes/intelogents.png">
                         Zeus
                     </div>
                 </div>
@@ -1373,24 +1381,7 @@
 </section>
 
 <div class="content">
-    <form>
 
-            <div class="form unselectable" id="login">
-                <h1 class="login">Login</h1>
-
-                <label ><b>Nic-name</b></label>
-                <input type="text" placeholder="Enter Email" name="Nic-name" required>
-
-                <label ><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
-
-                <label ><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-
-                <button type="submit" class="btn btn-dark">Login</button>
-            </div>
-
-    </form>
 </div>
 
 

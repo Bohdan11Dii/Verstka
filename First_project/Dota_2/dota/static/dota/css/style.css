@@ -224,6 +224,7 @@ span {
 
 .heroes_item {
     width: 256px;
+    text-decoration: none;
 
 
 }
