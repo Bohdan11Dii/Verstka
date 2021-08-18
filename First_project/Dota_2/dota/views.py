@@ -31,11 +31,11 @@ def about(request):
 
 
 def home(request):
-    return HttpResponse("This is news")
+    return render(request, 'dota/home.html')
 
 
 def contact(request):
-    return HttpResponse("Feedback")
+    return render(request, 'dota/contact.html')
 
 
 def login(request):
