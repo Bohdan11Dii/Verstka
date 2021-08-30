@@ -1,0 +1,327 @@
+body {
+    font-family: 'STIX Two Text', serif;
+    margin: 0;
+    font-size: 14px;
+    color: black;
+    overflow-x: hidden;
+    background-color: black;
+
+
+
+
+
+}
+
+
+.back{
+    position: absolute;
+    opacity: 0.5;
+    width: 1920px;
+    height: 930px;
+
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.header {
+
+    /*background-color: black;*/
+
+
+
+
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+
+}
+.header_logo {
+    color: white;
+
+}
+
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*padding: 35px 0*/
+}
+
+.logotyp{
+    position: relative;
+    width: 300px;
+    height: 100px;
+}
+
+.nav {
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+/* Mini reset, no margins, paddings or bullets */
+.menu,
+.submenu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Main level */
+.menu {
+    margin: 50px auto;
+    width: 800px;
+    /* http://www.red-team-design.com/horizontal-centering-using-css-fit-content-value */
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: fit-content;
+}
+
+.menu > li {
+    /*background: #34495e;*/
+    float: left;
+    position: relative;
+    transform: skewX(25deg);
+}
+
+.menu a {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Arial, Helvetica;
+    font-size: 14px;
+}
+.menu a:hover{
+    color: white;
+}
+.menu li:hover {
+    background: darkred;
+}
+
+.menu > li > a {
+    transform: skewX(-25deg);
+    padding: 1em 2em;
+}
+
+/* Dropdown */
+.submenu {
+    position: absolute;
+    width: 200px;
+    left: 50%; margin-left: -100px;
+    transform: skewX(-25deg);
+    transform-origin: left top;
+}
+
+.submenu li {
+    /*background-color: #34495e;*/
+    position: relative;
+    overflow: hidden;
+}
+
+.submenu > li > a {
+    padding: 1em 2em;
+}
+
+.submenu > li::after {
+    content: '';
+    position: absolute;
+    top: -125%;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 50px rgba(0, 0, 0, .9);
+}
+
+/* Odd stuff */
+.submenu > li:nth-child(odd){
+    transform: skewX(-25deg) translateX(0);
+}
+
+.submenu > li:nth-child(odd) > a {
+    transform: skewX(25deg);
+}
+
+.submenu > li:nth-child(odd)::after {
+    right: -50%;
+    transform: skewX(-25deg) rotate(3deg);
+}
+
+/* Even stuff */
+.submenu > li:nth-child(even){
+    transform: skewX(25deg) translateX(0);
+}
+
+.submenu > li:nth-child(even) > a {
+    transform: skewX(-25deg);
+}
+
+.submenu > li:nth-child(even)::after {
+    left: -50%;
+    transform: skewX(25deg) rotate(3deg);
+}
+
+/* Show dropdown */
+.submenu,
+.submenu li {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.submenu li {
+    transition: .2s ease transform;
+}
+
+.menu > li:hover .submenu,
+.menu > li:hover .submenu li {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu > li:hover .submenu li:nth-child(even){
+    transform: skewX(25deg) translateX(15px);
+}
+
+.menu > li:hover .submenu li:nth-child(odd){
+    transform: skewX(-25deg) translateX(-15px);
+}
+
+
+h2 {
+    color: white;
+    font-weight:300;
+    font-size:27px;
+    margin:0px;
+    text-align:center;
+    text-transform:uppercase;
+    margin-top:100px;
+    padding-bottom:15px;
+}
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+
+
+
+    margin:auto;
+    display:block;
+    /*background-color:rgba(0,0,0,0.5);*/
+    border-radius:15px;
+    /*padding:15px;*/
+    margin-bottom:50px;
+}
+.login-form {
+    position:relative;
+    border:2px solid rgba(255,255,255,0.2);
+    width:99%;
+    height:99%;
+    margin:auto;
+    display:block;
+    vertical-align:middle;
+    border-radius:15px;
+}
+.login-form hr.to-right {
+    width: 45%;
+    position:absolute;
+    right:30px;
+    border: 0px none;
+    height: 3px;
+    background-image: linear-gradient(to left,transparent, darkred);
+}
+.login-form hr.to-left {
+    width: 45%;
+    position:absolute;
+    left:30px;
+    border: 0px none;
+    height: 3px;
+    background-image: linear-gradient(to right,transparent, darkred);
+}
+
+.container-login {
+    width:60%;
+    margin:auto;
+    display:block;
+    margin-top:30px;
+}
+
+label {
+    color: white;
+    width: 100%;
+    display: inline-block;
+    padding:0px 0px 5px 5px;
+    margin-top: 20px;
+    font-size:18px;
+}
+input {
+    border: 0px none;
+    width: 94%;
+    border-radius: 4px;
+    height: 45px;
+    padding: 5px 3%;
+    font-size:15px;
+    font-family: inherit;
+    color:#222;
+}
+button {
+    margin: 30px auto;
+    width:94%;
+    background-color:rgba(138, 11, 11, 1);
+
+    color:#fff;
+    border-radius:20px;
+    height:50px;
+    text-transform:uppercase;
+    font-size:19px;
+    cursor:pointer;
+    transition:all 0.3s;
+}
+
+
+
+
+
+
+.login-footer {
+    margin-top:50px;
+}
+.login-footer a {
+    font-size: 16px;
+    margin:5px 0px;
+    text-align:center;
+    color:rgba(255,255,255,0.4);
+    font-weight:400;
+    line-height:1.4;
+    display: block;
+    transition:all 0.2s;
+}
+.login-footer a:hover {
+    color:rgba(255,255,255,0.7);
+}
+.login-footer i {
+    padding:0px 6px 0px 0px;
+}
+

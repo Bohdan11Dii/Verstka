@@ -474,13 +474,14 @@ span {
 
 .privacy {
     color: white;
-    margin-left: 950px;
 
+    text-align: center;
 
 }
 
 .game {
     color: white;
-    margin-left: 935px;
+
     text-transform: uppercase;
+    text-align: center;
 }

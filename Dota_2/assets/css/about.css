@@ -504,3 +504,22 @@ tr td:last-child {
     color: white;
     padding: 15px;
 }
+
+.container-fluid{
+    border-bottom: 2px solid darkred;
+}
+
+.privacy {
+    color: white;
+
+    font-size: 20px;
+    text-align: center;
+}
+
+.game {
+    font-size: 20px;
+    color: white;
+
+    text-transform: uppercase;
+    text-align: center;
+}
