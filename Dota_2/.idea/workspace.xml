@@ -5,11 +5,35 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gallery/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/Gallery/gallery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/gallery.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/media/1100.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/media/1100.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/our team/our.html" beforeDir="false" afterPath="$PROJECT_DIR$/our team/our.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/.idea/Python.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/DotaApp/DotaApp/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/DotaApp/DotaApp/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/DotaApp/DotaApp/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/DotaApp/DotaApp/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/DotaApp/DotaApp/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/DotaApp/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/DotaApp/dota/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/DotaApp/dota/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/DotaApp/dota/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/DotaApp/dota/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/DotaApp/dota/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/DotaApp/dota/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/DotaApp/dota/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/DotaApp/dota/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/DotaApp/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +101,9 @@
       <workItem from="1630569402922" duration="5046000" />
       <workItem from="1630651716638" duration="23616000" />
       <workItem from="1630915684584" duration="2442000" />
+      <workItem from="1631195928054" duration="79000" />
+      <workItem from="1631261513035" duration="44000" />
+      <workItem from="1632123299890" duration="505000" />
     </task>
     <servers />
   </component>
