@@ -35,5 +35,9 @@ def show_post(request, post_id):
     return render(request, 'dota/post.html', context=context)
 
 
+def login(request):
+    return render(request, 'dota/login/login.html')
+
+
 def pageNotFound(request, exception):
     return HttpResponseNotFound('<h1>Страница не найдена</h1>')

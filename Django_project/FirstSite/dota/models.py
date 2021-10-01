@@ -9,16 +9,15 @@ class Dota(models.Model):
     content = models.TextField(blank=True)
     photo = models.ImageField(upload_to="photos/%Y/%m/%/d/")
 
-
-
-
-
-
-
     def __str__(self):
         return self.title
 
-
-
     def get_absolute_url(self):
         return reverse('post', kwargs={'post_id': self.pk})
+
+
+class Players(models.Model):
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    content = models.TextField(blank=True)
+    photo = models.ImageField(upload_to="photos/%Y/%m/%/d/")

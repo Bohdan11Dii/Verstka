@@ -27,6 +27,8 @@
 
 
 <div>
+        <img class="back" src="../../../static/dota/assets/img/gallery/153-1536194_dota-2.jpg">
+
 <header class="header">
 
     <div class="container">
@@ -64,7 +66,8 @@
     <h1 class="title " >Професійні команди по Dota 2</h1>
     {% for p in posts %}
 
-        <li><h2>{{p.title}}</h2>
+        <li>
+            <h2>{{p.title}}</h2>
               {% if p.photo %}
     <p><img style="width: 15%;" class="img-article-left" src="{{p.photo.url}}"></p>
     {% endif %}
@@ -72,7 +75,7 @@
     {{p.content|linebreaks|truncatewords:80}}
     {% endautoescape %}
 <!--        <div class = 'clear'></div>-->
-        <p class="link-read-post"><a  href="{{ p.get_absolute_url }}"> Read</a></p>
+        <p class="link-read-post"><a class="read_button"  href="{{ p.get_absolute_url }}"> Read</a></p>
     {% endfor %}
 
 
