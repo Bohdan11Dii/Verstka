@@ -27,13 +27,6 @@ body {
 }
 
 .header {
-
-    /*position: fixed;*/
-    /*background-color: black;*/
-    /*opacity: 0.1;*/
-    /*margin: 25px;*/
-
-
     top: 0;
     left: 0;
     z-index: 1000;
@@ -49,13 +42,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*padding: 35px 0*/
 }
 
 .logotyp{
     width: 300px;
     height: 100px;
-    /*position: absolute;*/
 }
 
 .nav {
@@ -80,26 +71,21 @@ body {
     *zoom: 1;
 }
 
-/* Mini reset, no margins, paddings or bullets */
 .menu,
 .submenu {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-
-/* Main level */
 .menu {
     margin: 50px auto;
     width: 800px;
-    /* http://www.red-team-design.com/horizontal-centering-using-css-fit-content-value */
     width: -moz-fit-content;
     width: -webkit-fit-content;
     width: fit-content;
 }
 
 .menu > li {
-    /*background: #34495e;*/
     float: left;
     position: relative;
     transform: skewX(25deg);
@@ -123,7 +109,6 @@ body {
     padding: 1em 2em;
 }
 
-/* Dropdown */
 .submenu {
     position: absolute;
     width: 200px;
@@ -133,7 +118,6 @@ body {
 }
 
 .submenu li {
-    /*background-color: #34495e;*/
     position: relative;
     overflow: hidden;
 }
@@ -151,7 +135,6 @@ body {
     box-shadow: 0 0 50px rgba(0, 0, 0, .9);
 }
 
-/* Odd stuff */
 .submenu > li:nth-child(odd){
     transform: skewX(-25deg) translateX(0);
 }
@@ -165,7 +148,6 @@ body {
     transform: skewX(-25deg) rotate(3deg);
 }
 
-/* Even stuff */
 .submenu > li:nth-child(even){
     transform: skewX(25deg) translateX(0);
 }
@@ -179,7 +161,6 @@ body {
     transform: skewX(25deg) rotate(3deg);
 }
 
-/* Show dropdown */
 .submenu,
 .submenu li {
     opacity: 0;
@@ -207,9 +188,6 @@ body {
 .intro {
 
     position: absolute;
-    /*position: fixed;*/
-    /*background-color: black;*/
-
     min-height: 25rem;
     width: 100%;
     overflow: hidden;
@@ -249,6 +227,10 @@ body {
     }
     .navHamburger {
         display: block;
+    }
+    .back{
+        display: block;
+        position: absolute;
     }
 }
 
@@ -296,3 +278,6 @@ h2{
 .read_button{
     color: red!important;
 }
+
+
+

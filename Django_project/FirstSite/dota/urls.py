@@ -11,4 +11,5 @@ urlpatterns = [
     path('templates/dota/index.html', logo, name='logo'),
     path("templates/dota/login/login.html", login, name='login'),
     path('post/<int:post_id>/', show_post, name='post'),
+
 ]

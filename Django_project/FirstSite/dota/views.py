@@ -35,6 +35,10 @@ def show_post(request, post_id):
     return render(request, 'dota/post.html', context=context)
 
 
+
+
+
+
 def login(request):
     return render(request, 'dota/login/login.html')
 

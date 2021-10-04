@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About</title>
+    <title>Dota 2</title>
     <link   rel="stylesheet" href="../../../static/dota/assets/css/our_team.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,8 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@600&display=swap" rel="stylesheet">
 
-
-
+    <link rel="icon" href="../../../static/dota/assets/img/icon/dota-2-icon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
@@ -44,9 +43,8 @@
 
 
                 <ul class="menu cf">
-                    <li><a href="../about/about.html">About</a> </li>
-                    <li><a href="../Gallery/gallery.html">Gallery</a> </li>
-                    <li><a href="../login/login.html">Log in</a></li>
+                    <li><a href="../about/about.html">Історія</a> </li>
+                    <li><a href="../Gallery/gallery.html">Дивовижні історії</a> </li>
 
                 </ul>
 
@@ -75,7 +73,7 @@
     {{p.content|linebreaks|truncatewords:80}}
     {% endautoescape %}
 <!--        <div class = 'clear'></div>-->
-        <p class="link-read-post"><a class="read_button"  href="{{ p.get_absolute_url }}"> Read</a></p>
+        <p class="link-read-post"><a class="read_button"  href="{{ p.get_absolute_url }}">Читати</a></p>
     {% endfor %}
 
 
@@ -85,7 +83,11 @@
 
 
 
+
 </div>
+  <div class="footer">
+        <h1>Copyrigt</h1>
+    </div>
 <script src="../../../static/dota/assets/js/nav.js"></script>
 </body>
 </html>
